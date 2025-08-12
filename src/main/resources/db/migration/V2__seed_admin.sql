@@ -1,0 +1,1 @@
+INSERT INTO usuario (nombre, email, password, rol) VALUES ('Admin', 'admin@foro.com', '$2b$12$PyTBULRv1TuMFMjunkyBreOjh4GNUaDP9sffQ8u7pzwGSauOYQg5y', 'ADMIN');

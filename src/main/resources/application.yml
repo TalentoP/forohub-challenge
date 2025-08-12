@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: foro-hub
+  datasource:
+    url: jdbc:mysql://localhost:3306/forohub?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    username: ${DB_USER:root}
+    password: ${DB_PASS:root}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+seguridad:
+  jwt:
+    secreto: ${JWT_SECRET:UZuUkaRPcRtrQMJU7f_PYpSTqfAxamccl6IkWPAtbeY}
+    horasExpiracion: ${JWT_EXP_HOURS:24}
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
